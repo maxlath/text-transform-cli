@@ -1,7 +1,7 @@
 {
-  "name": "case-cli",
+  "name": "text-transform-cli",
   "version": "1.0.0",
-  "description": "a collection of CLI tools to pass from one case to the other",
+  "description": "A collection of CLI tools to operate simple text transformations",
   "main": "index.js",
   "bin": {
     "camel": "./bin/camel",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maxlath/case-cli.git"
+    "url": "git+https://github.com/maxlath/text-transform-cli.git"
   },
   "keywords": [
     "case",
@@ -27,9 +27,9 @@
   "author": "maxlath",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maxlath/case-cli/issues"
+    "url": "https://github.com/maxlath/text-transform-cli/issues"
   },
-  "homepage": "https://github.com/maxlath/case-cli#readme",
+  "homepage": "https://github.com/maxlath/text-transform-cli#readme",
   "dependencies": {
     "copy2cb": "^1.0.0",
     "lodash": "^4.13.1"
