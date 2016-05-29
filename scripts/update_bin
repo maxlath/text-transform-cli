@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+var exec = require('child_process').exec
+exec('chmod +x ./bin/*', function (err, res) {
+  if (err) { console.log('chmod err', err) }
+})
+
+var fs = require('fs')
+fs.readdir('./bin', function (err, bins) {
+  package = require('../package.json')
+  package.bin = {}
+  bins.forEach(function (binName) {
+    package.bin[binName] = `./bin/${binName}`
+  })
+  updatedPackage = JSON.stringify(package, null, 2)
+
+  fs.writeFile('./package.json', updatedPackage, function (err2, res) {
+    if (err2) {
+      console.log('err', err2)
+    } else {
+      console.log('updated packages')
+    }
+  })
+})

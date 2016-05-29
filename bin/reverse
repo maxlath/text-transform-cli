@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+var transformText = require('../lib/transform_text')
+var reverse = function (text) {
+  parts = text.split(' ')
+  if (parts.length === 1) {
+    return parts[0].split('').reverse().join('')
+  } else {
+    return parts.reverse().join(' ')
+  }
+}
+transformText(reverse)
