@@ -7,6 +7,7 @@
     "camel": "./bin/camel",
     "capitalize": "./bin/capitalize",
     "kebab": "./bin/kebab",
+    "length": "./bin/length",
     "lowercase": "./bin/lowercase",
     "reverse": "./bin/reverse",
     "snake": "./bin/snake",

@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+var transformText = require('../lib/transform_text')
+var length = (text) => text.length
+transformText(length)
