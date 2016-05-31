@@ -21,19 +21,55 @@ npm install -g text-transform-cli
 The following commands are direct wrappers of [Lodash](http://lodash.com) functions, made directly available from your terminal
 
 #### camel
+```sh
+$ camel helloWorld_What is happening-Today
+# => helloWorldWhatIsHappeningToday
+```
 *see lodash [camelCase](http://lodash.com/docs#camelCase)*
+
 #### kebab
+```sh
+$ kebab helloWorld_What is happening-Today
+# => hello-world-what-is-happening-today
+```
 *see lodash [kebabCase](http://lodash.com/docs#kebabCase)*
+
 #### snake
+```sh
+$ snake helloWorld_What is happening-Today
+# => hello_world_what_is_happening_today
+```
 *see lodash [snakeCase](http://lodash.com/docs#snakeCase)*
+
 #### capitalize
+```sh
+$ capitalize helloWorld_What is happening-Today
+# => Helloworld_what is happening-today
+```
 *see lodash  [capitalize](http://lodash.com/docs#capitalize)*
+
 #### lowercase
+```sh
+$ lowercase helloWorld_What is happening-Today
+# => hello world what is happening today
+```
 *see lodash  [lowercase](http://lodash.com/docs#lowerCase)*
+
 #### uppercase
+```sh
+$ uppercase helloWorld_What is happening-Today
+# => HELLO WORLD WHAT IS HAPPENING TODAY
+```
 *see lodash  [uppercase](http://lodash.com/docs#upperCase)*
 
+
 ### Others
+#### length
+```sh
+$ length gloubiboulga
+# => 12
+```
+
 #### reverse
 ```sh
 $ reverse hello
