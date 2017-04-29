@@ -46,7 +46,14 @@ $ snake helloWorld_What is happening-Today
 $ capitalize helloWorld_What is happening-Today
 # => Helloworld_what is happening-today
 ```
-*see lodash  [capitalize](http://lodash.com/docs#capitalize)*
+*see lodash [capitalize](http://lodash.com/docs#capitalize)*
+
+#### startcase
+```sh
+$ startcase helloWorld_What is happening-Today
+# => Hello World What Is Happening Today
+```
+*see lodash [startcase](http://lodash.com/docs#startcase)*
 
 #### lowercase
 ```sh
