@@ -11,6 +11,7 @@
     "lowercase": "./bin/lowercase",
     "reverse": "./bin/reverse",
     "snake": "./bin/snake",
+    "startcase": "./bin/startcase",
     "uppercase": "./bin/uppercase"
   },
   "scripts": {
