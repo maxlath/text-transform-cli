@@ -1,2 +1,10 @@
 #!/usr/bin/env node
-require('../lib/lodash_transform')('startCase')
+var transformText = require('../lib/transform_text')
+// Lodash start case loses accents so we need to have our own implementation
+var startCase = function (text) {
+  return text
+  .split(' ')
+  .map(part => part[0].toUpperCase() + part.slice(1).toLowerCase())
+  .join(' ')
+}
+transformText(startCase)
