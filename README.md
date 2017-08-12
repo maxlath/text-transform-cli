@@ -9,6 +9,30 @@ $ snake myNewFunctionName
 # => outputs 'my_new_function_name' and copy it to your clipboard
 ```
 
+## Summary
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Installation](#installation)
+- [Commands](#commands)
+  - [Lodash functions wrappers](#lodash-functions-wrappers)
+    - [camel](#camel)
+    - [kebab](#kebab)
+    - [snake](#snake)
+    - [capitalize](#capitalize)
+    - [startcase](#startcase)
+    - [lowercase](#lowercase)
+    - [uppercase](#uppercase)
+  - [Others](#others)
+    - [length](#length)
+    - [reverse](#reverse)
+  - [Options](#options)
+    - [Disable copy to clipboard](#disable-copy-to-clipboard)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Installation
 ```
 npm install -g text-transform-cli
