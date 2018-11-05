@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/maxlath/text-transform-cli#readme",
   "dependencies": {
-    "copy2cb": "^1.0.0",
-    "lodash": "^4.17.4"
+    "copy2cb": "^1.0.4",
+    "lodash": "^4.17.11"
   }
 }
