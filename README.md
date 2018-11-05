@@ -21,6 +21,7 @@ $ snake myNewFunctionName
     - [camel](#camel)
     - [kebab](#kebab)
     - [snake](#snake)
+    - [colon](#colon)
     - [capitalize](#capitalize)
     - [startcase](#startcase)
     - [lowercase](#lowercase)
@@ -64,6 +65,12 @@ $ snake helloWorld_What is happening-Today
 # => hello_world_what_is_happening_today
 ```
 *see lodash [snakeCase](http://lodash.com/docs#snakeCase)*
+
+#### colon
+```sh
+$ colon helloWorld_What is happening-Today
+# => hello:world:what:is:happening:today
+```
 
 #### capitalize
 ```sh

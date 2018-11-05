@@ -6,6 +6,7 @@
   "bin": {
     "camel": "./bin/camel",
     "capitalize": "./bin/capitalize",
+    "colon": "./bin/colon",
     "kebab": "./bin/kebab",
     "length": "./bin/length",
     "lowercase": "./bin/lowercase",
