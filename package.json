@@ -10,6 +10,7 @@
     "kebab": "./bin/kebab",
     "length": "./bin/length",
     "lowercase": "./bin/lowercase",
+    "randomcase": "./bin/randomcase",
     "reverse": "./bin/reverse",
     "snake": "./bin/snake",
     "startcase": "./bin/startcase",

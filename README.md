@@ -100,6 +100,11 @@ $ uppercase helloWorld_What is happening-Today
 ```
 *see lodash  [uppercase](http://lodash.com/docs#upperCase)*
 
+#### randomcase
+```sh
+$ randomcase helloWorld_What is happening-Today
+# => hElloWorlD_WHaT Is HAppEniNG-tOdAy
+```
 
 ### Others
 #### length

@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+const transformText = require('../lib/transform_text')
+// Lodash start case loses accents so we need to have our own implementation
+const randomCase = text => {
+  return text
+  .split('')
+  .map(randomCaseLetter)
+  .join('')
+}
+
+const randomCaseLetter = letter => {
+  return Math.random() > 0.5 ? letter.toLowerCase() : letter.toUpperCase()
+}
+
+transformText(randomCase)
