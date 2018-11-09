@@ -1,6 +1,9 @@
 # CHANGELOG
 *versions follow [SemVer](http://semver.org)*
 
+## 1.5.0 - 2018-11-09
+* Added [`randomcase`](https://github.com/maxlath/text-transform-cli#randomcase)
+
 ## 1.4.0 - 2018-11-05
 * Added [`colon`](https://github.com/maxlath/text-transform-cli#colon)
 
