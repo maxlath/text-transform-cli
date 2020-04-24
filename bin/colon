@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-var transformText = require('../lib/transform_text')
-var snakeCase = require('lodash/snakeCase')
-var colonCase = function (text) {
-  return snakeCase(text).replace(/_/g, ':')
-}
+const transformText = require('../lib/transform_text')
+const snakeCase = require('lodash/snakeCase')
+const colonCase = text => snakeCase(text).replace(/_/g, ':')
 transformText(colonCase)

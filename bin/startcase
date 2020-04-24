@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-var transformText = require('../lib/transform_text')
-var snakeCase = require('lodash/snakeCase')
+const transformText = require('../lib/transform_text')
+const snakeCase = require('lodash/snakeCase')
 // Lodash start case loses accents so we need to have our own implementation
-var startCase = function (text) {
+const startCase = text => {
   // Using a Lodash text transformation function
   // so that a camel case text can be splitted
   return snakeCase(text)
