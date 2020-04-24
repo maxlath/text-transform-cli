@@ -26,9 +26,12 @@ $ snake myNewFunctionName
     - [startcase](#startcase)
     - [lowercase](#lowercase)
     - [uppercase](#uppercase)
+    - [randomcase](#randomcase)
   - [Others](#others)
     - [length](#length)
     - [reverse](#reverse)
+    - [superscript](#superscript)
+    - [subscript](#subscript)
   - [Options](#options)
     - [Disable copy to clipboard](#disable-copy-to-clipboard)
 
@@ -47,79 +50,97 @@ The following commands are direct wrappers of [Lodash](http://lodash.com) functi
 
 #### camel
 ```sh
-$ camel helloWorld_What is happening-Today
+camel helloWorld_What is happening-Today
 # => helloWorldWhatIsHappeningToday
 ```
 *see lodash [camelCase](http://lodash.com/docs#camelCase)*
 
 #### kebab
 ```sh
-$ kebab helloWorld_What is happening-Today
+kebab helloWorld_What is happening-Today
 # => hello-world-what-is-happening-today
 ```
 *see lodash [kebabCase](http://lodash.com/docs#kebabCase)*
 
 #### snake
 ```sh
-$ snake helloWorld_What is happening-Today
+snake helloWorld_What is happening-Today
 # => hello_world_what_is_happening_today
 ```
 *see lodash [snakeCase](http://lodash.com/docs#snakeCase)*
 
 #### colon
 ```sh
-$ colon helloWorld_What is happening-Today
+colon helloWorld_What is happening-Today
 # => hello:world:what:is:happening:today
 ```
 
 #### capitalize
 ```sh
-$ capitalize helloWorld_What is happening-Today
+capitalize helloWorld_What is happening-Today
 # => Helloworld_what is happening-today
 ```
 *see lodash [capitalize](http://lodash.com/docs#capitalize)*
 
 #### startcase
 ```sh
-$ startcase helloWorld_What is happening-Today
+startcase helloWorld_What is happening-Today
 # => Hello World What Is Happening Today
 ```
 *see lodash [startcase](http://lodash.com/docs#startcase)*
 
 #### lowercase
 ```sh
-$ lowercase helloWorld_What is happening-Today
+lowercase helloWorld_What is happening-Today
 # => hello world what is happening today
 ```
 *see lodash  [lowercase](http://lodash.com/docs#lowerCase)*
 
 #### uppercase
 ```sh
-$ uppercase helloWorld_What is happening-Today
+uppercase helloWorld_What is happening-Today
 # => HELLO WORLD WHAT IS HAPPENING TODAY
 ```
 *see lodash  [uppercase](http://lodash.com/docs#upperCase)*
 
 #### randomcase
 ```sh
-$ randomcase helloWorld_What is happening-Today
+randomcase helloWorld_What is happening-Today
 # => hElloWorlD_WHaT Is HAppEniNG-tOdAy
 ```
 
 ### Others
 #### length
 ```sh
-$ length gloubiboulga
+length gloubiboulga
 # => 12
 ```
 
 #### reverse
 ```sh
-$ reverse hello
+reverse hello
 # => olleh
-$ reverse hello world
+reverse hello world
 # => world hello
 ```
+
+#### superscript
+```sh
+superscript hello 12(3)4=5
+# => ʰᵉˡˡᵒ ¹²⁽³⁾⁴⁼⁵
+printf '5.123*10' ; superscript 5 --no-cb
+# => 5.123*10⁵%
+```
+NBSome characters won't be converted as they aren't defined in Unicode
+
+#### subscript
+```sh
+subscript hello 12(3)4=5
+# => ₕₑₗₗₒ ₁₂₍₃₎₄₌₅
+printf 'H' ; subscript 2 --no-cb ; printf 'O'
+# => H₂O
+```
+NB: Some characters won't be converted as they aren't defined in Unicode
 
 ### Options
 #### Disable copy to clipboard
