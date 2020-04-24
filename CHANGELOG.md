@@ -1,6 +1,9 @@
 # CHANGELOG
 *versions follow [SemVer](http://semver.org)*
 
+## 1.6.0 - 2020-04-24
+* Added [`superscript`](https://github.com/maxlath/text-transform-cli#superscript) and [`subscript`](https://github.com/maxlath/text-transform-cli#subscript)
+
 ## 1.5.0 - 2018-11-09
 * Added [`randomcase`](https://github.com/maxlath/text-transform-cli#randomcase)
 
