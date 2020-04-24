@@ -4,22 +4,29 @@
   "description": "A collection of CLI tools to operate simple text transformations",
   "main": "index.js",
   "bin": {
-    "camel": "./bin/camel",
-    "capitalize": "./bin/capitalize",
-    "colon": "./bin/colon",
-    "kebab": "./bin/kebab",
-    "length": "./bin/length",
-    "lowercase": "./bin/lowercase",
-    "randomcase": "./bin/randomcase",
-    "reverse": "./bin/reverse",
-    "snake": "./bin/snake",
-    "startcase": "./bin/startcase",
-    "uppercase": "./bin/uppercase"
+    "camel": "bin/camel",
+    "capitalize": "bin/capitalize",
+    "colon": "bin/colon",
+    "kebab": "bin/kebab",
+    "length": "bin/length",
+    "lowercase": "bin/lowercase",
+    "randomcase": "bin/randomcase",
+    "reverse": "bin/reverse",
+    "snake": "bin/snake",
+    "startcase": "bin/startcase"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./scripts/update_bin",
     "update-toc": "npx doctoc README.md"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "index.js"
+  ],
+  "directories": {
+    "lib": "lib"
   },
   "repository": {
     "type": "git",
@@ -38,5 +45,9 @@
   "dependencies": {
     "copy2cb": "^1.0.4",
     "lodash": "^4.17.11"
-  }
+  },
+  "engines": {
+    "node": ">= 6.4"
+  },
+  "devDependencies": {}
 }
