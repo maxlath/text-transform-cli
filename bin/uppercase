@@ -1,2 +1,3 @@
 #!/usr/bin/env node
-require('../lib/lodash_transform')('upperCase')
+const transformText = require('../lib/transform_text')
+transformText(text => text.toUpperCase())
