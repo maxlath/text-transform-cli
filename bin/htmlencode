@@ -1,6 +1,20 @@
 #!/usr/bin/env node
 const transformText = require('../lib/transform_text')
+const namedHtmlEntities = require('../lib/named_html_entities')
 
-// See https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Character_reference_overview
+const entitiesByChar = {}
+Object.keys(namedHtmlEntities).reverse().forEach(name => {
+  const value = namedHtmlEntities[name]
+  entitiesByChar[value] = `&${name};`
+})
 
-transformText(decode)
+const encodeChar = char => {
+  const namedEntity = entitiesByChar[char]
+  if (namedEntity) return namedEntity
+  const charHex = Buffer.from(char).toString('hex')
+  return `&#x${charHex};`
+}
+
+const encode = str => str.split('').map(encodeChar).join('')
+
+transformText(encode)

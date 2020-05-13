@@ -8,6 +8,7 @@
     "capitalize": "./bin/capitalize",
     "colon": "./bin/colon",
     "htmldecode": "./bin/htmldecode",
+    "htmlencode": "./bin/htmlencode",
     "kebab": "./bin/kebab",
     "length": "./bin/length",
     "lowercase": "./bin/lowercase",
