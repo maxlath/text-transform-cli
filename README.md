@@ -17,7 +17,7 @@ $ snake myNewFunctionName
 
 - [Installation](#installation)
 - [Commands](#commands)
-  - [Lodash functions wrappers](#lodash-functions-wrappers)
+  - [Case manipulation](#case-manipulation)
     - [camel](#camel)
     - [kebab](#kebab)
     - [snake](#snake)
@@ -27,11 +27,17 @@ $ snake myNewFunctionName
     - [lowercase](#lowercase)
     - [uppercase](#uppercase)
     - [randomcase](#randomcase)
-  - [Others](#others)
-    - [length](#length)
-    - [reverse](#reverse)
+  - [Script level](#script-level)
     - [superscript](#superscript)
     - [subscript](#subscript)
+  - [Encoding](#encoding)
+    - [urlencode](#urlencode)
+    - [urldecode](#urldecode)
+    - [htmlencode](#htmlencode)
+    - [htmldecode](#htmldecode)
+  - [Misc](#misc)
+    - [length](#length)
+    - [reverse](#reverse)
   - [Options](#options)
     - [Disable copy to clipboard](#disable-copy-to-clipboard)
 
@@ -45,29 +51,25 @@ npm install -g text-transform-cli
 
 ## Commands
 
-### Lodash functions wrappers
-The following commands are direct wrappers of [Lodash](http://lodash.com) functions, made directly available from your terminal
+### Case manipulation
 
 #### camel
 ```sh
 camel helloWorld_What is happening-Today
 # => helloWorldWhatIsHappeningToday
 ```
-*see lodash [camelCase](http://lodash.com/docs#camelCase)*
 
 #### kebab
 ```sh
 kebab helloWorld_What is happening-Today
 # => hello-world-what-is-happening-today
 ```
-*see lodash [kebabCase](http://lodash.com/docs#kebabCase)*
 
 #### snake
 ```sh
 snake helloWorld_What is happening-Today
 # => hello_world_what_is_happening_today
 ```
-*see lodash [snakeCase](http://lodash.com/docs#snakeCase)*
 
 #### colon
 ```sh
@@ -80,28 +82,24 @@ colon helloWorld_What is happening-Today
 capitalize helloWorld_What is happening-Today
 # => Helloworld_what is happening-today
 ```
-*see lodash [capitalize](http://lodash.com/docs#capitalize)*
 
 #### startcase
 ```sh
 startcase helloWorld_What is happening-Today
 # => Hello World What Is Happening Today
 ```
-*see lodash [startcase](http://lodash.com/docs#startcase)*
 
 #### lowercase
 ```sh
 lowercase helloWorld_What is happening-Today
 # => hello world what is happening today
 ```
-*see lodash  [lowercase](http://lodash.com/docs#lowerCase)*
 
 #### uppercase
 ```sh
 uppercase helloWorld_What is happening-Today
 # => HELLO WORLD WHAT IS HAPPENING TODAY
 ```
-*see lodash  [uppercase](http://lodash.com/docs#upperCase)*
 
 #### randomcase
 ```sh
@@ -109,21 +107,7 @@ randomcase helloWorld_What is happening-Today
 # => hElloWorlD_WHaT Is HAppEniNG-tOdAy
 ```
 
-### Others
-#### length
-```sh
-length gloubiboulga
-# => 12
-```
-
-#### reverse
-```sh
-reverse hello
-# => olleh
-reverse hello world
-# => world hello
-```
-
+### Script level
 #### superscript
 ```sh
 superscript hello 12(3)4=5
@@ -141,6 +125,46 @@ printf 'H' ; subscript 2 --no-cb ; printf 'O'
 # => H₂O
 ```
 NB: Some characters won't be converted as they aren't defined in Unicode
+
+### Encoding
+#### urlencode
+```sh
+urlencode https://inventaire.io/entity/wd:Q315910
+# => https%3A%2F%2Finventaire.io%2Fentity%2Fwd%3AQ315910
+```
+
+#### urldecode
+```sh
+urldecode https%3A%2F%2Finventaire.io%2Fentity%2Fwd%3AQ315910
+# => https://inventaire.io/entity/wd:Q315910
+```
+
+#### htmlencode
+```sh
+htmlencode "'HMAC-SHA256' & 'HMAC-SHA1'"
+# => &apos;&#x48;&#x4d;&#x41;&#x43;&#x2d;&#x53;&#x48;&#x41;&#x32;&#x35;&#x36;&apos;&nbsp;&amp;&nbsp;&apos;&#x48;&#x4d;&#x41;&#x43;&#x2d;&#x53;&#x48;&#x41;&#x31;&apos;
+```
+
+#### htmldecode
+```sh
+htmldecode '&#039;HMAC-SHA256&#039; &amp; &#039;HMAC-SHA1&#039;'
+# => 'HMAC-SHA256' & 'HMAC-SHA1'
+```
+
+### Misc
+#### length
+```sh
+length gloubiboulga
+# => 12
+```
+
+#### reverse
+```sh
+reverse hello
+# => olleh
+reverse hello world
+# => world hello
+```
 
 ### Options
 #### Disable copy to clipboard

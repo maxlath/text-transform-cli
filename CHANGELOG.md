@@ -1,8 +1,15 @@
 # CHANGELOG
 *versions follow [SemVer](http://semver.org)*
 
+## 1.7.0 - 2020-05-13
+* Added [`urlencode`](https://github.com/maxlath/text-transform-cli#urlencode)
+* Added [`urldecode`](https://github.com/maxlath/text-transform-cli#urldecode)
+* Added [`htmlencode`](https://github.com/maxlath/text-transform-cli#htmlencode)
+* Added [`htmldecode`](https://github.com/maxlath/text-transform-cli#htmldecode)
+
 ## 1.6.0 - 2020-04-24
-* Added [`superscript`](https://github.com/maxlath/text-transform-cli#superscript) and [`subscript`](https://github.com/maxlath/text-transform-cli#subscript)
+* Added [`superscript`](https://github.com/maxlath/text-transform-cli#superscript)
+* Added [`subscript`](https://github.com/maxlath/text-transform-cli#subscript)
 
 ## 1.5.0 - 2018-11-09
 * Added [`randomcase`](https://github.com/maxlath/text-transform-cli#randomcase)
