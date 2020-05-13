@@ -16,7 +16,9 @@
     "startcase": "./bin/startcase",
     "subscript": "./bin/subscript",
     "superscript": "./bin/superscript",
-    "uppercase": "./bin/uppercase"
+    "uppercase": "./bin/uppercase",
+    "urlencode": "./bin/urlencode",
+    "urldecode": "./bin/urldecode"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
