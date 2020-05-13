@@ -1,0 +1,49 @@
+#!/usr/bin/env node
+const transformText = require('../lib/transform_text')
+
+// See https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Character_reference_overview
+const decimalEntityPattern = /^#\d{2,4}$/
+const hexEntityPattern = /^#x[0-9a-f]{2,4}$/
+const foundEntityMarker = 'ᐊᐊENTITYᐊᐊ'
+const foundEntityMarkerPattern = /&ᐊᐊENTITYᐊᐊ/g
+const namedHtmlEntities = require('../lib/named_html_entities')
+
+const decode = text => {
+  return text
+  .split('&')
+  .map(part => {
+    const [ entity, ...rest ] = part.split(';')
+
+    if (namedHtmlEntities[entity] != null) {
+      return rebuildPart(namedHtmlEntities[entity], rest)
+    }
+
+    const decimalEntityMatch = entity.match(decimalEntityPattern)
+    if (decimalEntityMatch) {
+      const decimal = decimalEntityMatch[0].replace('#', '')
+      const hex = parseInt(decimal).toString(16)
+      return rebuildHexPart(hex, rest)
+    }
+
+    const hexEntityMatch = entity.match(hexEntityPattern)
+    if (hexEntityMatch) {
+      const hex = hexEntityMatch[0].replace('#x', '')
+      return rebuildHexPart(hex, rest)
+    }
+
+    return part
+  })
+  .join('&')
+  // Remove '&' that were linked to found entities
+  .replace(foundEntityMarkerPattern, '')
+}
+
+const rebuildHexPart = (hex, rest) => {
+  const decoded = Buffer.from(hex, 'hex').toString()
+  return `${foundEntityMarker}${decoded}${rest.join(';')}`
+  return rebuildPart(decoded, rest)
+}
+
+const rebuildPart = (decoded, rest) => `${foundEntityMarker}${decoded}${rest.join(';')}`
+
+transformText(decode)

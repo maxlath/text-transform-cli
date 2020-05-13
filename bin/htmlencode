@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+const transformText = require('../lib/transform_text')
+
+// See https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Character_reference_overview
+
+transformText(decode)
