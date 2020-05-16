@@ -1,7 +1,7 @@
 # text-transform-cli
 A collection of CLI commands to operate frequently needed text transformations
 
-For those who have to pass from camel to snake case 10+ times a day, and all this kind of small text operation that makes a developer's daily routine.
+For those who have to pass from camel to snake case 10+ times a day, and all this kind of small text operation that makes a developer's daily routine. (Note that, for the most frequent case conversions, [there is probably a plugin to do that directly from your text editor](#see-also))
 
 Quick examples:
 ```sh
@@ -46,6 +46,7 @@ cat somefile | uppercase > somefile_uppercased
     - [reversewords](#reversewords)
 - [Options](#options)
   - [Disable copy to clipboard](#disable-copy-to-clipboard)
+- [See also](#see-also)
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -205,6 +206,9 @@ echo 'fooBar' | snake
 snake 'fooBar' | grep 'foo'
 snake 'fooBar' > somefile
 ```
+
+## See also
+- [Case conversion plugin for SublimeText](https://github.com/jdavisclark/CaseConversion)
 
 ## License
 MIT
