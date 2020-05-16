@@ -14,6 +14,7 @@
     "lowercase": "bin/lowercase",
     "randomcase": "bin/randomcase",
     "reverse": "bin/reverse",
+    "reversewords": "bin/reversewords",
     "snake": "bin/snake",
     "startcase": "bin/startcase",
     "subscript": "bin/subscript",

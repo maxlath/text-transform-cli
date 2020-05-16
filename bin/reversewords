@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+const transformText = require('../lib/transform_text')
+const reverseWords = text => text.split(' ').reverse().join(' ')
+transformText(reverseWords, false)
