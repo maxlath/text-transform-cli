@@ -1,12 +1,16 @@
 # text-transform-cli
-A collection of CLI tools to operate simple text transformations.
+A collection of CLI commands to operate frequently needed text transformations
 
-For those how have to pass from camel to snake case 10+ times a day, and all this kind of small text operation that makes a developer's daily routine.
+For those who have to pass from camel to snake case 10+ times a day, and all this kind of small text operation that makes a developer's daily routine.
 
-Example:
+Quick examples:
 ```sh
-$ snake myNewFunctionName
+# Transforming text passed as arguments
+snake myNewFunctionName
 # => outputs 'my_new_function_name' and copy it to your clipboard
+
+# Transforming text passed on stdin
+cat somefile | uppercase > somefile_uppercased
 ```
 
 ## Summary
@@ -38,8 +42,8 @@ $ snake myNewFunctionName
   - [Misc](#misc)
     - [length](#length)
     - [reverse](#reverse)
-  - [Options](#options)
-    - [Disable copy to clipboard](#disable-copy-to-clipboard)
+- [Options](#options)
+  - [Disable copy to clipboard](#disable-copy-to-clipboard)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -166,6 +170,25 @@ reverse hello world
 # => world hello
 ```
 
-### Options
-#### Disable copy to clipboard
+## Options
+### Disable copy to clipboard
 By default, the output is copied to the clipboard, but this can be disabled by passing the option command `-n` or `--no-clipboard`
+
+```sh
+# 'foo_bar' will be copied to your clipboard
+snake fooBar
+# disable that behaviour
+snake fooBar --no-clipboard
+# same but for the lazy
+snake fooBar -n
+```
+
+Copying to the clipboard is automatically disabled in some cases:
+```sh
+# when arguments come from the process standard input
+echo 'fooBar' | snake
+
+# when the process standard output is redirected to a file or another process
+snake 'fooBar' | grep 'foo'
+snake 'fooBar' > somefile
+```

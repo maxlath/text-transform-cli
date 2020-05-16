@@ -1,7 +1,7 @@
 {
   "name": "text-transform-cli",
   "version": "1.7.0",
-  "description": "A collection of CLI tools to operate simple text transformations",
+  "description": "A collection of CLI tools to operate frequently needed text transformations",
   "main": "index.js",
   "bin": {
     "camel": "bin/camel",
