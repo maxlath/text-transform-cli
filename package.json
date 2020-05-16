@@ -19,12 +19,13 @@
     "subscript": "./bin/subscript",
     "superscript": "./bin/superscript",
     "uppercase": "./bin/uppercase",
-    "urlencode": "./bin/urlencode",
-    "urldecode": "./bin/urldecode"
+    "urldecode": "./bin/urldecode",
+    "urlencode": "./bin/urlencode"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./scripts/update_bin",
+    "update-bin": "./scripts/update_bin",
     "update-toc": "./scripts/update_toc"
   },
   "files": [
@@ -54,7 +55,7 @@
     "lodash": "^4.17.11"
   },
   "engines": {
-    "node": ">= 6.4"
+    "node": ">= 7.6"
   },
   "devDependencies": {}
 }
