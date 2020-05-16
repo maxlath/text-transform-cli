@@ -27,7 +27,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./scripts/update_bin",
     "update-bin": "./scripts/update_bin",
-    "update-toc": "./scripts/update_toc"
+    "update-toc": "./scripts/update_toc",
+    "postpublish": "git push --tags"
   },
   "files": [
     "bin",
