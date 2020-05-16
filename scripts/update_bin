@@ -13,9 +13,9 @@ const updatePackageBins = async () => {
   const package = require('../package.json')
   package.bin = {}
   bins.forEach(binName => {
-    package.bin[binName] = `./bin/${binName}`
+    package.bin[binName] = `bin/${binName}`
   })
-  updatedPackage = JSON.stringify(package, null, 2)
+  updatedPackage = JSON.stringify(package, null, 2) + '\n'
   await writeFile('./package.json', updatedPackage)
   console.log('updated packages')
 }
