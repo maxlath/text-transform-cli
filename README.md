@@ -168,4 +168,4 @@ reverse hello world
 
 ### Options
 #### Disable copy to clipboard
-By default, the output is copied to the clipboard, but this can be disabled by passing the option command `--no-cb`
+By default, the output is copied to the clipboard, but this can be disabled by passing the option command `-n` or `--no-clipboard`
