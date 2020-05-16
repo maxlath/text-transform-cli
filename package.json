@@ -51,8 +51,8 @@
   },
   "homepage": "https://github.com/maxlath/text-transform-cli#readme",
   "dependencies": {
-    "copy2cb": "^1.0.4",
-    "lodash": "^4.17.11"
+    "copy2cb": "^1.0.5",
+    "lodash": "^4.17.15"
   },
   "engines": {
     "node": ">= 7.6"
