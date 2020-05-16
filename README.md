@@ -20,6 +20,7 @@ cat somefile | uppercase > somefile_uppercased
 
 
 - [Installation](#installation)
+- [Changelogs](#changelogs)
 - [Commands](#commands)
   - [Case manipulation](#case-manipulation)
     - [camel](#camel)
@@ -42,8 +43,10 @@ cat somefile | uppercase > somefile_uppercased
   - [Misc](#misc)
     - [length](#length)
     - [reverse](#reverse)
+    - [reversewords](#reversewords)
 - [Options](#options)
   - [Disable copy to clipboard](#disable-copy-to-clipboard)
+- [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -52,6 +55,8 @@ cat somefile | uppercase > somefile_uppercased
 npm install -g text-transform-cli
 ```
 :warning: this will add several un-namespaced new [commands](#commands) to your PATH, some would consider it "polluting", but using those 10+ times a day, I consider that it's totally worth it. But that's just my use case.
+
+## [Changelogs](https://github.com/maxlath/text-transform-cli/blob/master/CHANGELOG.md#changelog)
 
 ## Commands
 
@@ -200,3 +205,6 @@ echo 'fooBar' | snake
 snake 'fooBar' | grep 'foo'
 snake 'fooBar' > somefile
 ```
+
+## License
+MIT
