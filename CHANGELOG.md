@@ -1,6 +1,9 @@
 # CHANGELOG
 *versions follow [SemVer](http://semver.org)*
 
+## 2.2.0 - 2020-07-16
+* Added [`pascal`](https://github.com/maxlath/text-transform-cli#pascal)
+
 ## 2.1.0 - 2020-07-16
 * Added [`zalgo`](https://github.com/maxlath/text-transform-cli#zalgo)
 
