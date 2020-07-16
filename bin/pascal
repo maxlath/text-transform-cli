@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+const capitalize = require('lodash/capitalize')
+const camelCase = require('lodash/camelCase')
+const transformText = require('../lib/transform_text')
+
+const transform = text => {
+  const camelified = camelCase(text)
+  return camelified[0].toUpperCase() + camelified.slice(1)
+}
+
+transformText({ transform })

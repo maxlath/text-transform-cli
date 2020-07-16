@@ -12,6 +12,7 @@
     "kebab": "bin/kebab",
     "length": "bin/length",
     "lowercase": "bin/lowercase",
+    "pascal": "bin/pascal",
     "randomcase": "bin/randomcase",
     "reverse": "bin/reverse",
     "reversewords": "bin/reversewords",

@@ -24,6 +24,7 @@ cat somefile | uppercase > somefile_uppercased
 - [Commands](#commands)
   - [Case manipulation](#case-manipulation)
     - [camel](#camel)
+    - [pascal](#pascal)
     - [kebab](#kebab)
     - [snake](#snake)
     - [colon](#colon)
@@ -71,6 +72,12 @@ npm install -g text-transform-cli
 ```sh
 camel helloWorld_What is happening-Today
 # => helloWorldWhatIsHappeningToday
+```
+
+#### pascal
+```sh
+pascal helloWorld_What is happening-Today
+# => HelloWorldWhatIsHappeningToday
 ```
 
 #### kebab
