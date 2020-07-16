@@ -1,6 +1,9 @@
 # CHANGELOG
 *versions follow [SemVer](http://semver.org)*
 
+## 2.1.0 - 2020-07-16
+* Added [`zalgo`](https://github.com/maxlath/text-transform-cli#zalgo)
+
 ## 2.0.0 - 2020-05-16
 * **BREAKING CHANGE**: [auto-disabling clipboard when the input comes from stdin or when the output is redirected to some file or piped to another process](https://github.com/maxlath/text-transform-cli#disable-copy-to-clipboard)
 * **BREAKING CHANGE**: Splitted `reverse` into [`reverse`](https://github.com/maxlath/text-transform-cli#reverse) and [`reversewords`](https://github.com/maxlath/text-transform-cli#reversewords)
