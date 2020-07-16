@@ -1,6 +1,6 @@
 {
   "name": "text-transform-cli",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A collection of CLI tools to operate frequently needed text transformations",
   "main": "index.js",
   "bin": {
