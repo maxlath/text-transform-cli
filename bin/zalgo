@@ -46,15 +46,15 @@ const isZalgoChar = character => all.includes(character)
 const randomNumber = range => Math.floor(Math.random() * range)
 const getRandomCharacter = array => array[randomNumber(array.length)]
 
-const getCounts = ({ size = 'maxi', up, mid, down }) => {
+const getCounts = ({ max, min, up, mid, down }) => {
   let counts
-  if (size === 'mini') {
+  if (min) {
     counts = {
       up: randomNumber(8),
       min: randomNumber(2),
       down: randomNumber(8)
     }
-  } else if (size === 'maxi') {
+  } else if (max) {
     counts = {
       up: randomNumber(16) + 3,
       min: randomNumber(4) + 1,
@@ -67,9 +67,13 @@ const getCounts = ({ size = 'maxi', up, mid, down }) => {
       down: randomNumber(8) + 1
     }
   }
-  if (up === false) counts.up = 0
-  if (mid === false) counts.mid = 0
-  if (down === false) counts.down = 0
+
+  if (up || mid || down) {
+    if (!up) counts.up = 0
+    if (!mid) counts.mid = 0
+    if (!down) counts.down = 0
+  }
+
   return counts
 }
 
@@ -87,7 +91,7 @@ const getZalgoCharacters = (counts) => {
   .join('')
 }
 
-const zalgo = (text, options = {}) => {
+const zalgo = (text, options) => {
   const counts = getCounts(options)
 
   return text
@@ -99,4 +103,14 @@ const zalgo = (text, options = {}) => {
   .join('')
 }
 
-transformText(zalgo)
+transformText({
+  transform: zalgo,
+  optionsMap: {
+    up: 'up',
+    mid: 'mid',
+    down: 'down',
+    min: 'min',
+    medium: 'medium',
+    max: 'max'
+  }
+})

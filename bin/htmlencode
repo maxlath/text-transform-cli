@@ -17,4 +17,4 @@ const encodeChar = char => {
 
 const encode = str => str.split('').map(encodeChar).join('')
 
-transformText(encode)
+transformText({ transform: encode })

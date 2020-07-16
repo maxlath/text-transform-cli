@@ -40,10 +40,9 @@ const decode = text => {
 
 const rebuildHexPart = (hex, rest) => {
   const decoded = Buffer.from(hex, 'hex').toString()
-  return `${foundEntityMarker}${decoded}${rest.join(';')}`
   return rebuildPart(decoded, rest)
 }
 
 const rebuildPart = (decoded, rest) => `${foundEntityMarker}${decoded}${rest.join(';')}`
 
-transformText(decode)
+transformText({ transform: decode })

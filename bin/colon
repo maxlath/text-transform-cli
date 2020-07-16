@@ -2,4 +2,4 @@
 const transformText = require('../lib/transform_text')
 const snakeCase = require('lodash/snakeCase')
 const colonCase = text => snakeCase(text).replace(/_/g, ':')
-transformText(colonCase)
+transformText({ transform: colonCase })

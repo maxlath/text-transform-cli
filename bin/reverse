@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 const transformText = require('../lib/transform_text')
 const reverse = text => text.split('').reverse().join('')
-transformText(reverse, false)
+transformText({ transform: reverse, canHandleChunks: false })

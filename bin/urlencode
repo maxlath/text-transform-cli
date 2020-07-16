@@ -4,4 +4,4 @@ const transformText = require('../lib/transform_text')
 // cf https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent#Description
 const fixedEncodeURIComponent = str => encodeURIComponent(str).replace(/[!'()*]/g, encodeCharacter)
 const encodeCharacter = c => '%' + c.charCodeAt(0).toString(16)
-transformText(fixedEncodeURIComponent)
+transformText({ transform: fixedEncodeURIComponent })

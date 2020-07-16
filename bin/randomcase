@@ -12,4 +12,4 @@ const randomCaseLetter = letter => {
   return Math.random() > 0.5 ? letter.toLowerCase() : letter.toUpperCase()
 }
 
-transformText(randomCase)
+transformText({ transform: randomCase })
