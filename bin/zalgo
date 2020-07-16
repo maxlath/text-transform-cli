@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const transformText = require('../lib/transform_text')
+const easing = require('../lib/easing')
 
 // Based on https://github.com/Marak/zalgo.js/blob/master/zalgo.js
 const soul = {
@@ -50,21 +51,21 @@ const getCounts = ({ max, min, up, mid, down }) => {
   let counts
   if (min) {
     counts = {
-      up: randomNumber(8),
-      min: randomNumber(2),
-      down: randomNumber(8)
+      up: 3,
+      mid: 1,
+      down: 3
     }
   } else if (max) {
     counts = {
-      up: randomNumber(16) + 3,
-      min: randomNumber(4) + 1,
-      down: randomNumber(64) + 3
+      up: 40,
+      mid: 5,
+      down: 40
     }
   } else {
     counts = {
-      up: randomNumber(8) + 1,
-      min: randomNumber(6) / 2,
-      down: randomNumber(8) + 1
+      up: 10,
+      mid: 3,
+      down: 10
     }
   }
 
@@ -85,20 +86,34 @@ const getNumberOfRandomCharacters = (position, number) => {
 }
 
 const positions = Object.keys(soul)
-const getZalgoCharacters = (counts) => {
+const getZalgoCharacters = (counts, textIndex, textLength, growFn) => {
   return positions
-  .map(position => getNumberOfRandomCharacters(position, counts[position]))
+  .map(position => {
+    const factor = growFn ? growFn(textIndex / textLength) : 1
+    let number = factor * counts[position]
+    if (number < 0) number = 0
+    return getNumberOfRandomCharacters(position, Math.round(number))
+  })
   .join('')
 }
 
 const zalgo = (text, options) => {
   const counts = getCounts(options)
+  let growFnName
+  if (options.linear) growFnName = 'linear'
+  else if (options.bounce) growFnName = 'bounce'
+  else if (options.elastic) growFnName = 'elastic'
+  else if (options.random) growFnName = 'random'
+  else if (options.exp) growFnName = 'exp'
+  else if (options.cubic) growFnName = 'cubic'
+  else if (options.log) growFnName = 'log'
+  const growFn = easing[growFnName]
 
   return text
   .split('')
-  .map(letter => {
+  .map((letter, textIndex) => {
     if(isZalgoChar(letter)) return
-    else return letter + getZalgoCharacters(counts)
+    else return letter + getZalgoCharacters(counts, textIndex, text.length, growFn)
   })
   .join('')
 }
@@ -109,8 +124,17 @@ transformText({
     up: 'up',
     mid: 'mid',
     down: 'down',
+
     min: 'min',
     medium: 'medium',
-    max: 'max'
+    max: 'max',
+
+    linear: 'linear',
+    log: 'log',
+    exp: 'exp',
+    cubic: 'cubic',
+    bounce: 'bounce',
+    elastic: 'elastic',
+    random: 'random'
   }
 })
