@@ -44,6 +44,10 @@ cat somefile | uppercase > somefile_uppercased
     - [length](#length)
     - [reverse](#reverse)
     - [reversewords](#reversewords)
+    - [zalgo](#zalgo)
+      - [size](#size)
+      - [position](#position)
+      - [ease](#ease)
 - [Options](#options)
   - [Disable copy to clipboard](#disable-copy-to-clipboard)
 - [See also](#see-also)
@@ -184,7 +188,37 @@ reversewords hello world
 # => world hello
 ```
 
+#### zalgo
+```sh
+zalgo Lorem ipsum dolor sit amet
+```
+L̶̨̫̙͕͈͖͖̱̰̼̠͑̋̾ͯ̈̅ͤ͆͛̐́o̴̘͖̣̝̟͙̰̰̥͍͋̃ͣͤͯ̿͊̓̃̏̀͢r̜̥͔̺̩͔̖̣͙ͥ͌̾̉̽̈́̿ͧ̅͞ͅ ҉͢ę̨̢̯̖̺̣̜̻̳̘͍̐̅͌ͥͯ͂̔ͯͭ͊ͅm̹͓̺̼̗͉̟̙͚̙͑͐́ͯ͗͗́̔͐̉ ҉̴͡ ̵͚̙̩̬̫͉̼̻̤̯ͤ́͋͂̃̉̓̒ͦ̀̕͝i̡̛̤̩̦̱͖̻̥̫͍ͦ̓͋̿̊̑͒̔ͫ̎̀ͅp̛̞̮̪̩͖͖̳̪̜͔̀̉ͪ̑̄̇́̾̽̒͘͠s͍͙̭͕̹̜̤̣͕̺̐̊ͥ̉ͥ̈ͩ̅̉̀͝͞͠ṷ̸̶̺̦̝̺͇͎̘̙̮̂ͤͬͩ̄̈ͫ̓̐ͥ̕m̵̩̮̖͎͕͈̯͕͍̟̌ͨ͌̉̽͂̂̈̇̚͜͠ ̶̗̙̦͉̺̺̫͕͖̮̆ͤ͊̽̅͋ͫͫ̓̚͢͞d̛̰͓̘̣̹̪̤̥̥͔ͩ̊̇̒ͧ̔ͦͪͦͭ͞͞ǫ̷̯̟̼̼̯̯̲̪͕͉̀̇́̃ͩͤͮ̇͑ͭ͝ļ̵̹̫̱͕̯͙̠͇̱̜̎̽ͫ͐̇̿̃ͭͪͬ͠o̶̷̼̼͓̜̣̥̪͈͉̝͑ͫ̋̑̊͑̒͒ͫ̎́ŗ̥̬̝̝͍̱̲̲̙̅̽ͫͨ̃ͩ̓̋ͤ̋͘͜ͅ ̨̻͕̳͍̝̟͚͖͖̱͐̍̄͌̑̍͆͛̄̚͢͝ș̵̨̛͕̦̙̗̖̬̱͉͎͗̐͑̓ͤ̏ͨ̍͊̿i̧̛̞̼̯̻̤̖̜̙̹̺ͦ̌ͭͧ̄́̾͐̓̚͠t̷̘̭̬͇͓̯̮̗̹̞̐ͥ̋̑̏͒̏̌͑̎͘͘ ̷̠̗̹̝͈͍̰̱͚͇̓̂ͫͣ̾̿̂ͦ́ͧ͠ ҉a̴̸̶͚͓͉̟͕̳͓̞̫͈ͥ̑̓ͭͤ̐̿̿̉̚m͎̰͖̞̘͓̪̲̲̻̽̌̒͑ͣ͒̎̈̐̎̀͠͡ę̨̹̮̼͙̩̭͎͈͓̬͛ͭͣ̋ͣ̈ͪ̔ͥ̂͝t͖̠̭͍̞̖̤͇̩̘͋ͯ̽̌͑ͪ̂ͫ͋ͫ͜͝ ҉
+
+
+##### size
+Size options: `min`, `medium`, `max` (Default: `medium`)
+```sh
+zalgo --min Lorem ipsum dolor sit amet
+```
+L̜̰̟̄͆̒́o̹̝̥͛̒͌͜r̨̺͕̮ͤ́̓e̖͕̾̂̄́ͅm̴͓͍̑͛̑ͅ ̢̠̘̥̑ͤ̽i̢͈̩̔̿͐ͅp̛̹̮̖̿ͭͬs̺̜̠ͪ̾̇͠u͙̖̦ͦͪͮ͠m̛͇̠̮ͥͯ̎ ͙̞̯̅̄͋ ҉d̳̳̙͐ͥ͐͠ő͉̟͈̉̓ ҉l̸͚̟̗ͧͨ͊o̷̦̪̎̎ͧͅȑ̭̪̫̉ͩ ҉ ̡͔̘̮ͨ̈̚s̨̗͚͉͗͋͑ì͓̺̯ͨͮ̀t̸͉̬͇ͨ̍̐ ̮̣͇̐͛ͣ͢a̵͎̻̳̍ͪ̎m̻̰̖ͫͮ̊ ҉e̷̘̞͖̽ͯ͐t̨͖͙͙̉ͯ̚
+
+##### position
+Position options: `up`, `mid`, `down` (Default: `up`, `mid`, and `down`)
+```sh
+zalgo --mid Lorem ipsum dolor sit amet
+```
+L̷͟͠ơ̵͟r ҉̕ ҉ę̸̨m̶̨͢ ̸̨̡i̴̸͠p̢̛͘ş̛̛ú͡͠m̵̡̕ ̨͘͟d̨̛͘o̢͘͞l̡̀͡o̸͢͟r̢͘͝ ̵̛͟s̴̸̴i̸̢̡t̵̴͠ ̷̨́ą̀̕ḿ̨͜e̢̨͡t̸̕͡
+##### ease
+Ease function options: `linear`, `log`, `exp`, `cubic`, `bounce`, `elastic`, `random` (Default: none)
+```sh
+zalgo --cubic Lorem ipsum dolor sit amet
+```
+Lorem ipsum̳̑ ̝ͥd̠͊ọ̒l̦̺̋̂o̪͓̎̋́r̥̬͂̌͘ ̞͕̣ͯ͆̈̀s̶̙̥̦ͨͤ͌i̜͖̠̦̊̊̍̀͝t͈̼̻͉̺͐ͪ͑ͬ̒͠ ̧̖̱̺̭̤̈̍̓͂̚͜ä̸̮̰̝̹̦͌̏ͧ̓ͩ͡ͅm̰͈̝̱̣̼͓̓͒͑͊̏ͤ̑͟͜e̞̰̭͉͉͙͕̤̓́̽ͮ̍̎́́̚̚ṭ̸̢͈̦̙̦͎͉̰͔͋̈̅̌ͬ̆ͩ͑ͩ ҉
+
 ## Options
+
+Global options available for all commands
+
 ### Disable copy to clipboard
 By default, the output is copied to the clipboard, but this can be disabled by passing the option command `-n` or `--no-clipboard`
 
