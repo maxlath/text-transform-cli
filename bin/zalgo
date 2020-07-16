@@ -1,0 +1,102 @@
+#!/usr/bin/env node
+const transformText = require('../lib/transform_text')
+
+// Based on https://github.com/Marak/zalgo.js/blob/master/zalgo.js
+const soul = {
+  up: [
+    '̍','̎','̄','̅',
+    '̿','̑','̆','̐',
+    '͒','͗','͑','̇',
+    '̈','̊','͂','̓',
+    '̈','͊','͋','͌',
+    '̃','̂','̌','͐',
+    '̀','́','̋','̏',
+    '̒','̓','̔','̽',
+    '̉','ͣ','ͤ','ͥ',
+    'ͦ','ͧ','ͨ','ͩ',
+    'ͪ','ͫ','ͬ','ͭ',
+    'ͮ','ͯ','̾','͛',
+    '͆','̚'
+    ],
+  down: [
+    '̖','̗','̘','̙',
+    '̜','̝','̞','̟',
+    '̠','̤','̥','̦',
+    '̩','̪','̫','̬',
+    '̭','̮','̯','̰',
+    '̱','̲','̳','̹',
+    '̺','̻','̼','ͅ',
+    '͇','͈','͉','͍',
+    '͎','͓','͔','͕',
+    '͖','͙','͚','̣'
+    ],
+  mid: [
+    '̕','̛','̀','́',
+    '͘','̡','̢','̧',
+    '̨','̴','̵','̶',
+    '͜','͝','͞',
+    '͟','͠','͢','̸',
+    '̷','͡',' ҉'
+    ]
+}
+
+const all = [].concat(soul.up, soul.down, soul.mid)
+const isZalgoChar = character => all.includes(character)
+
+const randomNumber = range => Math.floor(Math.random() * range)
+const getRandomCharacter = array => array[randomNumber(array.length)]
+
+const getCounts = ({ size = 'maxi', up, mid, down }) => {
+  let counts
+  if (size === 'mini') {
+    counts = {
+      up: randomNumber(8),
+      min: randomNumber(2),
+      down: randomNumber(8)
+    }
+  } else if (size === 'maxi') {
+    counts = {
+      up: randomNumber(16) + 3,
+      min: randomNumber(4) + 1,
+      down: randomNumber(64) + 3
+    }
+  } else {
+    counts = {
+      up: randomNumber(8) + 1,
+      min: randomNumber(6) / 2,
+      down: randomNumber(8) + 1
+    }
+  }
+  if (up === false) counts.up = 0
+  if (mid === false) counts.mid = 0
+  if (down === false) counts.down = 0
+  return counts
+}
+
+const getArrayOfLength = length => new Array(length).fill('')
+const getNumberOfRandomCharacters = (position, number) => {
+  return getArrayOfLength(number)
+  .map(() => getRandomCharacter(soul[position]))
+  .join('')
+}
+
+const positions = Object.keys(soul)
+const getZalgoCharacters = (counts) => {
+  return positions
+  .map(position => getNumberOfRandomCharacters(position, counts[position]))
+  .join('')
+}
+
+const zalgo = (text, options = {}) => {
+  const counts = getCounts(options)
+
+  return text
+  .split('')
+  .map(letter => {
+    if(isZalgoChar(letter)) return
+    else return letter + getZalgoCharacters(counts)
+  })
+  .join('')
+}
+
+transformText(zalgo)

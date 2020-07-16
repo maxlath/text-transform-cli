@@ -21,7 +21,8 @@
     "superscript": "bin/superscript",
     "uppercase": "bin/uppercase",
     "urldecode": "bin/urldecode",
-    "urlencode": "bin/urlencode"
+    "urlencode": "bin/urlencode",
+    "zalgo": "bin/zalgo"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
