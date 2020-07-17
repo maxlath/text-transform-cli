@@ -150,8 +150,10 @@ NB: Some characters won't be converted as they aren't defined in Unicode
 ### Encoding
 #### urlencode
 ```sh
-urlencode https://inventaire.io/entity/wd:Q315910
-# => https%3A%2F%2Finventaire.io%2Fentity%2Fwd%3AQ315910
+urlencode https://en.wikipedia.org/wiki/Minister_for_Māori_Development
+# => https://en.wikipedia.org/wiki/Minister_for_M%C4%81ori_Development
+urlencode --component https://en.wikipedia.org/wiki/Minister_for_Māori_Development
+# => https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMinister_for_M%C4%81ori_Development
 ```
 
 #### urldecode
