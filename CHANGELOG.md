@@ -1,6 +1,9 @@
 # CHANGELOG
 *versions follow [SemVer](http://semver.org)*
 
+## 3.0.0 - 2020-07-16
+* [`urlencode`](https://github.com/maxlath/text-transform-cli#urlencode): default to using the `encodeURI` function, using the `encodeURIComponent` function only if requested with `--component`
+
 ## 2.2.0 - 2020-07-16
 * Added [`pascal`](https://github.com/maxlath/text-transform-cli#pascal)
 
