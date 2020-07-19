@@ -1,3 +1,5 @@
 #!/usr/bin/env node
 const transformText = require('../lib/transform_text')
-transformText(text => text.toLowerCase())
+transformText({
+  transform: text => text.toLowerCase()
+})
