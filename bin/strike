@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+require('../lib/decorate')({
+  default: 'long',
+  decorators: {
+    tild: {
+      hex: 'ccb4',
+      prefix: true,
+    },
+    short: {
+      hex: 'ccb5',
+      prefix: true,
+    },
+    long: {
+      hex: 'ccb6',
+      prefix: true,
+    },
+    slash: {
+      hex: 'ccb7',
+      prefix: true,
+      shortOption: 'h'
+    },
+    slashShort: {
+      hex: 'ccb8',
+      prefix: true,
+      shortOption: 'r'
+    },
+  }
+})

@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+require('../lib/decorate')({
+  default: 'normal',
+  decorators: {
+    dashed: {
+      hex: 'ccb1',
+      postfix: true,
+    },
+    normal: {
+      hex: 'ccb2',
+      prefix: true,
+    },
+    double: {
+      hex: 'ccb3',
+      prefix: true,
+    },
+  }
+})
