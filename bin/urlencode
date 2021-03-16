@@ -10,7 +10,7 @@ const encodeCharacter = c => '%' + c.charCodeAt(0).toString(16)
 transformText({
   transform: fixedEncodeURIComponent,
   optionsMap: {
-    'c': 'component',
-    'component': 'component'
+    c: 'component',
+    component: 'component'
   }
 })

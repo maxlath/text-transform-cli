@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-const capitalize = require('lodash/capitalize')
 const camelCase = require('lodash/camelCase')
 const transformText = require('../lib/transform_text')
 
