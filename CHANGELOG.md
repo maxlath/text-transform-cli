@@ -1,6 +1,22 @@
 # CHANGELOG
 *versions follow [SemVer](http://semver.org)*
 
+## 3.1.0 - 2022-03-05
+* Added style commands:
+  * [boldsans](https://github.com/maxlath/text-transform-cli#boldsans)
+  * [boldserif](https://github.com/maxlath/text-transform-cli#boldserif)
+  * [bolditalicsans](https://github.com/maxlath/text-transform-cli#bolditalicsans)
+  * [bolditalicserif](https://github.com/maxlath/text-transform-cli#bolditalicserif)
+  * [gothic](https://github.com/maxlath/text-transform-cli#gothic)
+  * [gothicbold](https://github.com/maxlath/text-transform-cli#gothicbold)
+  * [italicsans](https://github.com/maxlath/text-transform-cli#italicsans)
+  * [italicserif](https://github.com/maxlath/text-transform-cli#italicserif)
+  * [monospace](https://github.com/maxlath/text-transform-cli#monospace)
+  * [strike](https://github.com/maxlath/text-transform-cli#strike)
+  * [underline](https://github.com/maxlath/text-transform-cli#underline)
+  * [upsidedown](https://github.com/maxlath/text-transform-cli#upsidedown)
+* Added [unicode](https://github.com/maxlath/text-transform-cli#unicode)
+
 ## 3.0.0 - 2020-07-16
 * [`urlencode`](https://github.com/maxlath/text-transform-cli#urlencode): default to using the `encodeURI` function, using the `encodeURIComponent` function only if requested with `--component`
 
