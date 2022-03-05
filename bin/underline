@@ -13,6 +13,7 @@ require('../lib/decorate')({
     double: {
       hex: 'ccb3',
       prefix: true,
+      shortOption: 'b',
     },
   }
 })
