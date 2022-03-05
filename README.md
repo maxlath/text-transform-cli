@@ -240,12 +240,26 @@ monospace yolo
 ```sh
 strike yolo
 # => ̶y̶o̶l̶o
+strike --tild yolo
+# => ̴y̴o̴l̴o
+strike --short yolo
+# => ̵y̵o̵l̵o
+strike --long yolo
+# => ̶y̶o̶l̶o
+strike --slash yolo
+# => ̷y̷o̷l̷o
+strike --slashShort yolo
+# => ̸y̸o̸l̸o
 ```
 
 #### underline
 ```sh
 underline yolo
 # => ̲y̲o̲l̲o
+underline --dashed yolo
+# => y̱o̱ḻo̱
+underline --double yolo
+# => ̳y̳o̳l̳o
 ```
 
 #### upsidedown
