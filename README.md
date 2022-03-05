@@ -181,6 +181,79 @@ unicode 'zàéä'
 # => \u007a\u00e0\u00e9\u00e4
 ```
 
+### Style
+#### boldsans
+```sh
+boldsans yolo
+# => 𝘆𝗼𝗹𝗼
+```
+
+#### boldserif
+```sh
+boldserif yolo
+# => 𝐲𝐨𝐥𝐨
+```
+
+#### bolditalicsans
+```sh
+bolditalicsans yolo
+# => 𝙮𝙤𝙡𝙤
+```
+
+#### bolditalicserif
+```sh
+bolditalicserif yolo
+# => 𝒚𝒐𝒍𝒐
+```
+
+#### gothic
+```sh
+gothic yolo
+# => 𝔶𝔬𝔩𝔬
+```
+
+#### gothicbold
+```sh
+gothicbold yolo
+# => 𝖞𝖔𝖑𝖔
+```
+
+#### italicsans
+```sh
+italicsans yolo
+# => 𝘺𝘰𝘭𝘰
+```
+
+#### italicserif
+```sh
+italicserif yolo
+# => 𝑦𝑜𝑙𝑜
+```
+
+#### monospace
+```sh
+monospace yolo
+# => 𝚢𝚘𝚕𝚘
+```
+
+#### strike
+```sh
+strike yolo
+# => ̶y̶o̶l̶o
+```
+
+#### underline
+```sh
+underline yolo
+# => ̲y̲o̲l̲o
+```
+
+#### upsidedown
+```sh
+upsidedown yolo
+# => ʎoןo
+```
+
 ### Misc
 #### length
 ```sh
