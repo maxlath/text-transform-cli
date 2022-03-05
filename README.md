@@ -18,7 +18,6 @@ cat somefile | uppercase > somefile_uppercased
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Installation](#installation)
 - [Changelogs](#changelogs)
 - [Commands](#commands)
@@ -41,6 +40,7 @@ cat somefile | uppercase > somefile_uppercased
     - [urldecode](#urldecode)
     - [htmlencode](#htmlencode)
     - [htmldecode](#htmldecode)
+    - [unicode](#unicode)
   - [Misc](#misc)
     - [length](#length)
     - [reverse](#reverse)
@@ -172,6 +172,13 @@ htmlencode "'HMAC-SHA256' & 'HMAC-SHA1'"
 ```sh
 htmldecode '&#039;HMAC-SHA256&#039; &amp; &#039;HMAC-SHA1&#039;'
 # => 'HMAC-SHA256' & 'HMAC-SHA1'
+```
+
+#### unicode
+Get the UTF-16 codes for a given string
+```sh
+unicode 'zàéä'
+# => \u007a\u00e0\u00e9\u00e4
 ```
 
 ### Misc

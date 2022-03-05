@@ -21,6 +21,7 @@
     "subscript": "bin/subscript",
     "superscript": "bin/superscript",
     "uppercase": "bin/uppercase",
+    "unicode": "bin/unicode",
     "urldecode": "bin/urldecode",
     "urlencode": "bin/urlencode",
     "zalgo": "bin/zalgo"

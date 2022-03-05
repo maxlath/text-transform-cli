@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+const transformText = require('../lib/transform_text')
+
+const toUnicode = character => {
+  const code = character.codePointAt(0).toString(16).padStart(4, '0')
+  return `\\u${code}`
+}
+
+transformText({
+  transform: str => {
+    return str.split('').map(toUnicode).join('')
+  }
+})
