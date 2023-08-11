@@ -30,6 +30,7 @@
     "strike": "bin/strike",
     "subscript": "bin/subscript",
     "superscript": "bin/superscript",
+    "t9": "bin/t9",
     "underline": "bin/underline",
     "unicode": "bin/unicode",
     "uppercase": "bin/uppercase",
