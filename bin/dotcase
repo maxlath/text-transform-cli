@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+const transformText = require('../lib/transform_text')
+transformText({
+  transform: text => text.replace(/\s+/g, '.')
+})

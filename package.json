@@ -11,6 +11,7 @@
     "camel": "bin/camel",
     "capitalize": "bin/capitalize",
     "colon": "bin/colon",
+    "dotcase": "bin/dotcase",
     "gothic": "bin/gothic",
     "gothicbold": "bin/gothicbold",
     "htmldecode": "bin/htmldecode",
