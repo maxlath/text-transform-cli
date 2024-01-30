@@ -1,5 +1,11 @@
 #!/usr/bin/env node
 const transformText = require('../lib/transform_text')
 transformText({
-  transform: text => text.replace(/\s+/g, '.')
+  transform: text => {
+    return text
+    .replace(/[^\p{Letter}\p{Number}]+/ug, '.')
+    .replace(/\.+/g, '.')
+    .replace(/^\./, '')
+    .replace(/\.$/, '')
+  }
 })
