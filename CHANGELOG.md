@@ -1,6 +1,9 @@
 # CHANGELOG
 *versions follow [SemVer](http://semver.org)*
 
+## 4.0.0 - 2024-01-30
+* **BREAKING CHANGE**: `dotcase` now replaces all non-alphanumeric characters by dots (instead of just spaces before)
+
 ## 3.1.0 - 2022-03-05
 * Added style commands:
   * [boldsans](https://github.com/maxlath/text-transform-cli#boldsans)
