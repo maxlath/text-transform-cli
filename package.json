@@ -57,7 +57,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maxlath/text-transform-cli.git"
+    "url": "https://codeberg.org/maxlath/text-transform-cli"
   },
   "keywords": [
     "case",
@@ -66,9 +66,9 @@
   "author": "maxlath",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maxlath/text-transform-cli/issues"
+    "url": "https://codeberg.org/maxlath/text-transform-cli/issues"
   },
-  "homepage": "https://github.com/maxlath/text-transform-cli#readme",
+  "homepage": "https://codeberg.org/maxlath/text-transform-cli#readme",
   "dependencies": {
     "copy2cb": "^1.0.5",
     "lodash": "^4.17.15"
